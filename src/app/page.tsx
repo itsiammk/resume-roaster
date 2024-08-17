@@ -17,7 +17,7 @@ export default function Home() {
       enableSystem
       disableTransitionOnChange
     >
-      <div className="fixed right-4 top-4" >
+      <div className="absolute z-[9999] right-4 top-4" >
         <ModeToggle />
       </div>
       <main>
