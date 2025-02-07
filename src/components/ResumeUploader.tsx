@@ -15,6 +15,7 @@ import {
   DialogTitle,
   DialogClose,
 } from "@/components/ui/dialog";
+import { BackgroundBeamsWithCollision } from "./ui/background-beans";
 
 interface ResumeUploaderProps {
   onRoastComplete: (result: string) => void;
@@ -114,7 +115,7 @@ const ResumeUploader: React.FC<ResumeUploaderProps> = ({ onRoastComplete }) => {
   };
 
   return (
-    <AuroraBackground className="z-40">
+    <BackgroundBeamsWithCollision className="z-40">
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -175,7 +176,7 @@ const ResumeUploader: React.FC<ResumeUploaderProps> = ({ onRoastComplete }) => {
           </div>
           </DialogContent>
       </Dialog>
-    </AuroraBackground>
+    </BackgroundBeamsWithCollision>
   );
 };
 
