@@ -1,21 +1,19 @@
-import React, { useState, ChangeEvent } from "react";
-import { motion } from "framer-motion";
-import { AuroraBackground } from "../components/ui/aurora-background";
-import { FileUpload } from "./ui/file-upload";
-import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
-import { MultiStepLoader as Loader } from "./ui/multi-step-loader";
-import { Button } from "./ui/button";
-import { Loader2 } from "lucide-react";
-import { IconSquareRoundedX } from "@tabler/icons-react";
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
-  DialogTitle,
-  DialogClose,
+  DialogTitle
 } from "@/components/ui/dialog";
+import { IconSquareRoundedX } from "@tabler/icons-react";
+import { motion } from "framer-motion";
+import { Loader2 } from "lucide-react";
+import React, { useState } from "react";
 import { BackgroundBeamsWithCollision } from "./ui/background-beans";
+import { Button } from "./ui/button";
+import { FileUpload } from "./ui/file-upload";
+import { MultiStepLoader as Loader } from "./ui/multi-step-loader";
+import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 
 interface ResumeUploaderProps {
   onRoastComplete: (result: string) => void;
@@ -174,7 +172,7 @@ const ResumeUploader: React.FC<ResumeUploaderProps> = ({ onRoastComplete }) => {
           <div className="mt-4 max-h-[60vh] overflow-y-auto">
             <p>{roastResult}</p>
           </div>
-          </DialogContent>
+        </DialogContent>
       </Dialog>
     </BackgroundBeamsWithCollision>
   );
